@@ -1,0 +1,40 @@
+{
+  "name": "quarterly-earnings-presentation",
+  "version": "1.0.0",
+  "description": "Q4 2024 Earnings Report - Interactive RevealJS Presentation for Financial Institution",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -o",
+    "dev": "npx live-server --port=8080 --open=/",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "gh-pages -d .",
+    "pdf": "npx decktape reveal http://localhost:8080 quarterly-earnings-q4-2024.pdf"
+  },
+  "keywords": [
+    "revealjs",
+    "presentation",
+    "earnings",
+    "financial",
+    "interactive",
+    "slides"
+  ],
+  "author": {
+    "name": "Technical Consultant",
+    "email": "24ds2000137@ds.study.iitm.ac.in"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "decktape": "^3.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/[USERNAME]/quarterly-earnings-presentation.git"
+  },
+  "homepage": "https://[USERNAME].github.io/quarterly-earnings-presentation/",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

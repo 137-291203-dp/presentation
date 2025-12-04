@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 2024 Earnings Report - Financial Institution</title>
+    
+    <!-- RevealJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- MathJax for equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Title Slide -->
+            <section data-background-gradient="linear-gradient(45deg, #1e3c72, #2a5298)">
+                <h1 style="color: white;">Q4 2024 Earnings Report</h1>
+                <h3 style="color: #e8f4f8;">Financial Performance & Strategic Outlook</h3>
+                <p style="color: #b8d4e3;">
+                    <small>Prepared by: Technical Consultant<br>
+                    Email: 24ds2000137@ds.study.iitm.ac.in<br>
+                    Date: December 2024</small>
+                </p>
+                <aside class="notes">
+                    Welcome everyone to our Q4 2024 earnings presentation. Today we'll cover our financial performance, key metrics, and strategic outlook for the coming year. This presentation includes interactive elements and detailed analysis.
+                </aside>
+            </section>
+
+            <!-- Executive Summary -->
+            <section>
+                <h2>Executive Summary</h2>
+                <div class="r-stack">
+                    <div class="fragment fade-in-then-out">
+                        <h3>Key Highlights</h3>
+                        <ul>
+                            <li class="fragment">Revenue growth of 12.5% YoY</li>
+                            <li class="fragment">Net income increased by 8.3%</li>
+                            <li class="fragment">ROE improved to 15.2%</li>
+                            <li class="fragment">Digital transformation initiatives accelerated</li>
+                        </ul>
+                    </div>
+                    <div class="fragment">
+                        <h3>Strategic Focus Areas</h3>
+                        <div class="fragment">
+                            <p><strong>Technology Investment:</strong> $2.5B allocated for digital infrastructure</p>
+                            <p><strong>Risk Management:</strong> Enhanced AI-driven risk assessment</p>
+                            <p><strong>Customer Experience:</strong> 95% satisfaction rate achieved</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Our Q4 performance exceeded expectations across all key metrics. The revenue growth was driven primarily by our digital banking services and wealth management division. The ROE improvement reflects our efficient capital allocation strategy.
+                </aside>
+            </section>
+
+            <!-- Financial Metrics with Markdown -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Financial Performance Metrics
+
+                    ### Revenue Breakdown
+                    | Business Unit | Q4 2024 | Q4 2023 | Growth |
+                    |---------------|---------|---------|--------|
+                    | Retail Banking | $4.2B | $3.8B | +10.5% |
+                    | Corporate Banking | $2.8B | $2.4B | +16.7% |
+                    | Wealth Management | $1.5B | $1.2B | +25.0% |
+                    | Investment Banking | $1.1B | $1.0B | +10.0% |
+
+                    ---
+
+                    ## Key Performance Indicators
+
+                    - **Net Interest Margin**: 3.2% (↑ from 3.0%)
+                    - **Cost-to-Income Ratio**: 58.5% (↓ from 61.2%)
+                    - **Loan Loss Provision**: 0.8% (↓ from 1.2%)
+                    - **Tier 1 Capital Ratio**: 12.5% (regulatory requirement: 8.0%)
+                </textarea>
+                <aside class="notes">
+                    The markdown slide shows our detailed financial breakdown. Notice the strong performance in wealth management - this reflects our strategic focus on high-net-worth clients. The improved cost-to-income ratio demonstrates operational efficiency gains.
+                </aside>
+            </section>
+
+            <!-- Risk Analysis with Mathematical Formulas -->
+            <section>
+                <h2>Risk Assessment & Capital Adequacy</h2>
+                <div class="fragment">
+                    <h3>Value at Risk (VaR) Calculation</h3>
+                    <p>Our 99% confidence VaR for trading portfolio:</p>
+                    $$VaR_{99\%} = \mu - 2.33 \times \sigma \times \sqrt{t}$$
+                    <p class="fragment">Where μ = expected return, σ = volatility, t = time horizon</p>
+                </div>
+                
+                <div class="fragment">
+                    <h3>Capital Adequacy Ratio</h3>
+                    $$CAR = \frac{Tier_1 + Tier_2}{Risk\ Weighted\ Assets} \times 100$$
+                    <p>Current CAR: <strong>15.8%</strong> (Well above regulatory minimum of 10.5%)</p>
+                </div>
+
+                <div class="fragment">
+                    <h3>Expected Credit Loss Model</h3>
+                    $$ECL = PD \times LGD \times EAD$$
+                    <p><small>PD = Probability of Default, LGD = Loss Given Default, EAD = Exposure at Default</small></p>
+                </div>
+                <aside class="notes">
+                    Our risk management framework uses sophisticated mathematical models. The VaR calculation helps us understand potential losses, while the CAR shows we maintain strong capital buffers. The ECL model is compliant with IFRS 9 standards.
+                </aside>
+            </section>
+
+            <!-- Technology & Code Implementation -->
+            <section>
+                <h2>Digital Transformation: Code Implementation</h2>
+                <h3>Risk Analytics Engine</h3>
+                <pre><code class="python" data-line-numbers="1-3|5-8|10-15">
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+
+# Credit Risk Scoring Model
+def calculate_credit_score(customer_data):
+    features = ['income', 'debt_ratio', 'credit_history', 'employment_years']
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    
+    # Risk probability calculation
+    risk_probability = model.predict_proba(customer_data[features])[:, 1]
+    
+    # Convert to credit score (300-850 scale)
+    credit_score = 850 - (risk_probability * 550)
+    return credit_score.astype(int)
+
+# Portfolio Optimization
+def optimize_portfolio(returns, risk_tolerance=0.1):
+    """
+    Modern Portfolio Theory implementation
+    """
+    n_assets = len(returns.columns)
+    weights = np.random.random(n_assets)
+    weights /= np.sum(weights)
+    
+    expected_return = np.sum(returns.mean() * weights) * 252
+    portfolio_std = np.sqrt(np.dot(weights.T, np.dot(returns.cov() * 252, weights)))
+    
+    return {'weights': weights, 'return': expected_return, 'risk': portfolio_std}
+                </code></pre>
+                <aside class="notes">
+                    This code shows our actual implementation of risk analytics. The credit scoring model uses machine learning to assess default probability. The portfolio optimization follows Modern Portfolio Theory to maximize risk-adjusted returns.
+                </aside>
+            </section>
+
+            <!-- Interactive Data Visualization -->
+            <section>
+                <h2>Revenue Trends & Projections</h2>
+                <div id="revenue-chart" style="height: 400px; width: 100%;"></div>
+                <div class="fragment">
+                    <p><strong>Key Insights:</strong></p>
+                    <ul>
+                        <li class="fragment">Consistent quarterly growth over 3 years</li>
+                        <li class="fragment">Digital services contributing 35% of total revenue</li>
+                        <li class="fragment">Projected 15% growth for 2025</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    The chart shows our revenue trajectory with clear seasonal patterns. Q4 typically shows strong performance due to year-end corporate activities. The digital services growth is particularly encouraging for future sustainability.
+                </aside>
+            </section>
+
+            <!-- Market Analysis with Fragments -->
+            <section>
+                <h2>Market Position & Competitive Analysis</h2>
+                <div class="r-stack">
+                    <div class="fragment current-visible">
+                        <h3>Market Share</h3>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="fragment">
+                                <h4>Retail Banking</h4>
+                                <div style="font-size: 3em; color: #2a5298;">18.5%</div>
+                                <p>3rd largest in region</p>
+                            </div>
+                            <div class="fragment">
+                                <h4>Corporate Banking</h4>
+                                <div style="font-size: 3em; color: #1e3c72;">22.1%</div>
+                                <p>2nd largest in region</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fragment">
+                        <h3>Competitive Advantages</h3>
+                        <ul>
+                            <li class="fragment highlight-blue">Advanced AI-driven customer service</li>
+                            <li class="fragment highlight-green">Lowest cost-to-income ratio in sector</li>
+                            <li class="fragment highlight-red">Strongest digital banking platform</li>
+                            <li class="fragment highlight-current-blue">Superior risk management capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Our market position has strengthened significantly. The retail banking growth is particularly impressive given the competitive landscape. Our digital platform gives us a significant advantage over traditional competitors.
+                </aside>
+            </section>
+
+            <!-- ESG & Sustainability -->
+            <section data-background-color="#2c5530">
+                <h2 style="color: white;">ESG Performance & Sustainability</h2>
+                <div class="fragment">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; color: white;">
+                        <div class="fragment">
+                            <h3 style="color: #90EE90;">Environmental</h3>
+                            <ul>
+                                <li>Carbon neutral operations by 2025</li>
+                                <li>$5B green financing portfolio</li>
+                                <li>50% reduction in paper usage</li>
+                            </ul>
+                        </div>
+                        <div class="fragment">
+                            <h3 style="color: #87CEEB;">Social</h3>
+                            <ul>
+                                <li>$2B community investment</li>
+                                <li>40% female leadership</li>
+                                <li>99.9% financial inclusion score</li>
+                            </ul>
+                        </div>
+                        <div class="fragment">
+                            <h3 style="color: #DDA0DD;">Governance</h3>
+                            <ul>
+                                <li>Independent board majority</li>
+                                <li>Enhanced cybersecurity framework</li>
+                                <li>Transparent reporting standards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    ESG performance is increasingly important to stakeholders. Our environmental initiatives include significant green financing. Social impact through community investment and diversity. Governance improvements include cybersecurity enhancements.
+                </aside>
+            </section>
+
+            <!-- 2025 Strategic Outlook -->
+            <section>
+                <h2>2025 Strategic Outlook</h2>
+                <div class="fragment">
+                    <h3>Growth Initiatives</h3>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="fragment" style="flex: 1; margin: 0 1rem;">
+                            <h4>🚀 Digital Innovation</h4>
+                            <ul>
+                                <li>AI-powered personal banking</li>
+                                <li>Blockchain trade finance</li>
+                                <li>Quantum computing research</li>
+                            </ul>
+                        </div>
+                        <div class="fragment" style="flex: 1; margin: 0 1rem;">
+                            <h4>🌍 Market Expansion</h4>
+                            <ul>
+                                <li>3 new international markets</li>
+                                <li>SME banking focus</li>
+                                <li>Fintech partnerships</li>
+                            </ul>
+                        </div>
+                        <div class="fragment" style="flex: 1; margin: 0 1rem;">
+                            <h4>💼 Product Innovation</h4>
+                            <ul>
+                                <li>Sustainable finance products</li>
+                                <li>Cryptocurrency custody</li>
+                                <li>Embedded banking services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Our 2025 strategy focuses on three pillars. Digital innovation will differentiate us in the market. Market expansion targets high-growth regions. Product innovation addresses emerging customer needs, particularly in sustainable finance.
+                </aside>
+            </section>
+
+            <!-- Financial Projections -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## 2025 Financial Projections
+
+                    ### Revenue Targets
+                    ```
+                    Q1 2025: $10.2B (+8% QoQ)
+                    Q2 2025: $10.8B (+6% QoQ)  
+                    Q3 2025: $11.1B (+3% QoQ)
+                    Q4 2025: $11.5B (+4% QoQ)
+                    
+                    Total 2025: $43.6B (+15% YoY)
+                    ```
+
+                    ### Key Assumptions
+                    - Interest rates stabilize at 4.5-5.0%
+                    - GDP growth of 2.5-3.0%
+                    - Digital adoption continues at 20% annually
+                    - Credit losses remain below 1.0%
+                </textarea>
+                <aside class="notes">
+                    These projections are based on current market conditions and our strategic initiatives. The 15% growth target is ambitious but achievable given our digital transformation progress and market expansion plans.
+                </aside>
+            </section>
+
+            <!-- Q&A Section -->
+            <section data-background-gradient="linear-gradient(45deg, #1e3c72, #2a5298)">
+                <h1 style="color: white;">Questions & Discussion</h1>
+                <div class="fragment" style="color: white;">
+                    <h3>Key Topics for Discussion:</h3>
+                    <ul>
+                        <li class="fragment">Digital transformation ROI</li>
+                        <li class="fragment">Market expansion strategy</li>
+                        <li class="fragment">Risk management framework</li>
+                        <li class="fragment">ESG commitments and timeline</li>
+                        <li class="fragment">Competitive positioning</li>
+                    </ul>
+                </div>
+                <p style="color: #b8d4e3; margin-top: 2rem;">
+                    <small>Contact: 24ds2000137@ds.study.iitm.ac.in</small>
+                </p>
+                <aside class="notes">
+                    Open the floor for questions. Be prepared to discuss the digital transformation ROI in detail, as this is often a key concern for stakeholders. Also be ready to elaborate on our risk management improvements and ESG timeline.
+                </aside>
+            </section>
+
+            <!-- Thank You -->
+            <section data-background-color="#1e3c72">
+                <h1 style="color: white;">Thank You</h1>
+                <h3 style="color: #e8f4f8;">Q4 2024 Earnings Report</h3>
+                <p style="color: #b8d4e3;">
+                    For additional information and detailed financial statements,<br>
+                    please visit our investor relations portal.
+                </p>
+                <div style="margin-top: 2rem; color: #b8d4e3;">
+                    <p><small>Prepared by: Technical Consultant</small></p>
+                    <p><small>Email: 24ds2000137@ds.study.iitm.ac.in</small></p>
+                    <p><small>© 2024 Financial Institution. All rights reserved.</small></p>
+                </div>
+                <aside class="notes">
+                    Thank the audience for their attention. Remind them about the investor relations portal for detailed information. Be available for follow-up questions after the presentation.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- RevealJS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/presentation.js"></script>
+
+    <script>
+        // Initialize RevealJS
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            
+            // More options
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+        });
+
+        // Initialize charts when slides change
+        Reveal.addEventListener('slidechanged', function(event) {
+            if (event.currentSlide.querySelector('#revenue-chart')) {
+                initRevenueChart();
+            }
+        });
+    </script>
+</body>
+</html>
